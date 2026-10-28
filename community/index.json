@@ -4,8 +4,51 @@
   "name": "Termix Community Plugins",
   "apiVersion": 1,
   "publicKey": "LYdHHGJeinCZ7UA8R/o5i1P5W3+dzktTDn5bxp4nPpI=",
-  "updatedAt": "2026-10-28T17:35:36.773Z",
+  "updatedAt": "2026-10-28T19:55:07.008Z",
   "plugins": [
+    {
+      "id": "container-files",
+      "name": "Container Files",
+      "description": "Browse, edit and transfer files in Docker and Podman containers over SSH.",
+      "author": "Reydan46",
+      "category": "Infrastructure",
+      "repository": "https://github.com/Reydan46/termix-plugin-container-files",
+      "icon": "FolderArchive",
+      "features": [
+        "Browse the filesystem of Docker and Podman containers",
+        "Edit text files, manage permissions and standard file operations",
+        "Stream uploads and downloads between your computer and a container",
+        "Works with stopped and minimal containers where the engine allows it"
+      ],
+      "docs": "https://github.com/Reydan46/termix-plugin-container-files/tree/main/docs",
+      "contributes": ["permissions", "settings", "tabs"],
+      "versions": [],
+      "gated": [
+        {
+          "version": "1.0.1",
+          "api": "1",
+          "url": "https://github.com/Reydan46/termix-plugin-container-files/releases/download/v1.0.1/container-files-1.0.1.tmxplug",
+          "sha256": "7d230d86b7a1e5a9ec47397225987f8a0bcb14836766373fafe9e2467e93ad5e",
+          "signature": "b+WCyoDGq4WdMOVL9nVDQ7stbM8d5cS3ha1GnCu1xliJmRkXuu+rmecVKWdqAL5bU6aEOIG8IM2A8wJxgRPiCQ==",
+          "size": 7134021,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "ssh:connect",
+            "network:serve",
+            "ui:surface",
+            "desktop:local"
+          ],
+          "engine": {
+            "api": "^1.9",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Reydan46/termix-plugin-container-files/releases/tag/v1.0.1",
+          "notes": "### Fixed\n\n- Connection and download error messages in the file window are translated instead of always shown in English.",
+          "publishedAt": "2026-10-28T19:27:12.000Z"
+        }
+      ]
+    },
     {
       "id": "herdr",
       "name": "Herdr",
