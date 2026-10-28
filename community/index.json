@@ -4,7 +4,7 @@
   "name": "Termix Community Plugins",
   "apiVersion": 1,
   "publicKey": "LYdHHGJeinCZ7UA8R/o5i1P5W3+dzktTDn5bxp4nPpI=",
-  "updatedAt": "2026-10-28T14:07:28.558Z",
+  "updatedAt": "2026-10-28T15:36:16.098Z",
   "plugins": [
     {
       "id": "herdr",
@@ -108,6 +108,31 @@
       "contributes": ["panels", "permissions", "settings"],
       "versions": [],
       "gated": [
+        {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/P3RF3CTION/termix-plugin-netbird/releases/download/v1.2.0/netbird-1.2.0.tmxplug",
+          "sha256": "11754338d21a291f7014fda9a0bc93550dd3e3e07a1c63284ce572a10ee586e4",
+          "signature": "P/diGMi0n1rYv4yqxNYO8DWf7gyZ29FnArN389d4qWd9bZUDT7swLRQGTHpPBqMrGIVeaGIc4fLZ5ws45MBRBQ==",
+          "size": 82053,
+          "capabilities": [
+            "network:outbound",
+            "network:serve",
+            "ui:surface",
+            "hosts:read",
+            "hosts:write",
+            "kv:own",
+            "secrets:own",
+            "credentials:use"
+          ],
+          "engine": {
+            "api": "^1.8",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/P3RF3CTION/termix-plugin-netbird/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- The panel names the NetBird user and role behind the credential. With the role \"user\" NetBird lists only that user's own peers; the panel now says so instead of showing a short or empty list without a reason\n- In the \"own sign-in, else service token\" mode, a personal access token or SSO session that NetBird rejects falls back to the service token, with a notice\n- Filters for online peers and for a NetBird group\n- Badges for an expired peer login, a peer waiting for approval and peers running the NetBird SSH server\n- A notice when your own access token is saved but the sign-in mode ignores it\n\n### Fixed\n\n- A personal or service token pasted with the scheme (\"Token nbp_...\", \"Bearer ...\"), in quotes or with a line break was sent as is and NetBird answered 401. Tokens are now cleaned before use\n- A valid token that may not list peers (NetBird answers 403, for example when regular users are blocked) is reported as such instead of as a generic API error",
+          "publishedAt": "2026-10-28T15:32:23.000Z"
+        },
         {
           "version": "1.1.0",
           "api": "1",
