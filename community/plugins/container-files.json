@@ -1,0 +1,12 @@
+{
+  "$schema": "../../community-submission-schema.json",
+  "id": "container-files",
+  "repository": "https://github.com/Reydan46/termix-plugin-container-files",
+  "maintainers": ["Reydan46"],
+  "versions": [
+    {
+      "version": "1.0.0",
+      "sha256": "956642ccab5ef70919972f4386a4e3f451906c74824be96fc8141daf868820f6"
+    }
+  ]
+}
