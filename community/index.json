@@ -4,7 +4,7 @@
   "name": "Termix Community Plugins",
   "apiVersion": 1,
   "publicKey": "LYdHHGJeinCZ7UA8R/o5i1P5W3+dzktTDn5bxp4nPpI=",
-  "updatedAt": "2026-10-28T19:55:07.008Z",
+  "updatedAt": "2026-10-28T22:11:24.864Z",
   "plugins": [
     {
       "id": "container-files",
@@ -114,6 +114,22 @@
       "docs": "https://github.com/ZarenOFF/termix-plugin-host-icons/tree/main/docs",
       "contributes": ["permissions", "settings", "syncEntities"],
       "versions": [
+        {
+          "version": "0.4.0",
+          "api": "1",
+          "url": "https://github.com/ZarenOFF/termix-plugin-host-icons/releases/download/v0.4.0/host-icons-0.4.0.tmxplug",
+          "sha256": "28b0bea5cca78096b2edda92243f2f0c94d30c4ff0ca176302614155bf77c3c4",
+          "signature": "KE87VYrqBJz1FpUG10HEJSNa0s9CTfJrtuSvtBLfkahnjvLae7RysxHMDRBoO10ypiD5vrQv4w5GerYeqRl7CQ==",
+          "size": 383756,
+          "capabilities": ["db:own", "network:serve", "ui:surface"],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/ZarenOFF/termix-plugin-host-icons/releases/tag/v0.4.0",
+          "notes": "### Added\n\n- A corner badge on the icon with one or two characters or a dot, in its own color, such as R1 on a database replica or a dot on a host that needs attention. It has its own default per folder, user and server, so a folder can give all its hosts a badge while every host keeps its own icon\n\n### Changed\n\n- The option for no color now says what it does for the chosen icon, such as Own colors for a multicolor uploaded icon, and shows a preview of the icon without a color\n- Monochrome icon is now off by default when uploading an SVG, so an uploaded icon keeps the colors of its file unless you turn it on\n\n### Fixed\n\n- The 10 MB limit of the uploaded icon library now counts bytes on SQLite and PostgreSQL, not characters\n- Uploads at the same time can no longer push the icon library past its limit of 500 icons or 10 MB",
+          "publishedAt": "2026-10-28T21:40:14.000Z"
+        },
         {
           "version": "0.3.0",
           "api": "1",
