@@ -5,6 +5,10 @@
   "maintainers": ["ZarenOFF"],
   "versions": [
     {
+      "version": "0.5.0",
+      "sha256": "7ddd6cb9f65f3c8ab8b8555ff7a5374b46124d6b3517b0f92e836d738f11aa12"
+    },
+    {
       "version": "0.4.0",
       "sha256": "28b0bea5cca78096b2edda92243f2f0c94d30c4ff0ca176302614155bf77c3c4"
     },
