@@ -1,19 +1,55 @@
 {
-  "updatedAt": "2026-10-28T10:00:18.645Z",
+  "updatedAt": "2026-10-29T10:23:59.448Z",
   "plugins": {
-    "host-icons": {
-      "downloads": 15,
+    "container-files": {
+      "downloads": 12,
       "versions": {
+        "1.0.1": {
+          "downloads": 9
+        },
+        "1.0.0": {
+          "downloads": 3
+        }
+      }
+    },
+    "herdr": {
+      "downloads": 6,
+      "versions": {
+        "1.0.0": {
+          "downloads": 6
+        }
+      }
+    },
+    "host-icons": {
+      "downloads": 51,
+      "versions": {
+        "0.4.0": {
+          "downloads": 9
+        },
+        "0.3.0": {
+          "downloads": 13
+        },
         "0.2.0": {
+          "downloads": 29
+        }
+      }
+    },
+    "netbird": {
+      "downloads": 25,
+      "versions": {
+        "1.2.0": {
+          "downloads": 10
+        },
+        "1.1.0": {
           "downloads": 15
         }
       }
     },
     "pve-power": {
-      "downloads": 79,
+      "downloads": 82,
       "versions": {
         "0.6.9": {
-          "downloads": 62
+          "downloads": 65
         },
         "0.6.8": {
           "downloads": 9
@@ -23,6 +59,17 @@
         },
         "0.6.6": {
           "downloads": 2
+        }
+      }
+    },
+    "termix-vscode": {
+      "downloads": 15,
+      "versions": {
+        "1.1.1": {
+          "downloads": 12
+        },
+        "1.1.0": {
+          "downloads": 3
         }
       }
     }
