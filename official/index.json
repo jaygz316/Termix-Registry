@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-22T18:50:58.144Z",
+  "updatedAt": "2026-10-29T22:11:44.448Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -1182,6 +1182,30 @@
       ],
       "gated": [
         {
+          "version": "1.2.2",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Docker/releases/download/v1.2.2/docker-1.2.2.tmxplug",
+          "sha256": "2e6ff0a68a70d83267c250547e6a4e4f6282d557b608500309136aca76881abf",
+          "signature": "5S7P7ZSQd1NzvmReY2Sqyt/igo48xDLmXGubLSAXX8lnVQJ7f1qH0qCSfWxdUleo0Pt5QxP6zEM5nR5avovWDA==",
+          "size": 1176652,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "ssh:connect",
+            "network:serve",
+            "ui:surface",
+            "events:core",
+            "users:impersonate"
+          ],
+          "engine": {
+            "api": "^1.9",
+            "termix": ">=26.10.6"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Docker/releases/tag/v1.2.2",
+          "notes": "### Changed\n\n- Needs Termix 26.10.6 or newer",
+          "publishedAt": "2026-10-29T22:10:42.000Z"
+        },
+        {
           "version": "1.2.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Docker/releases/download/v1.2.1/docker-1.2.1.tmxplug",
@@ -1202,8 +1226,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Docker/releases/tag/v1.2.1",
-          "notes": "### Added\n\n- Docker hosts dashboard card: running, stopped and unhealthy containers on each host with Docker on\n\n### Changed\n\n- The container grid fits as many cards as the tab has room for, or pick how many per row next to the grid and list switch",
-          "publishedAt": "2026-10-22T18:09:06.000Z"
+          "publishedAt": "2026-10-22T18:09:06.000Z",
+          "notes": "### Added\n\n- Docker hosts dashboard card: running, stopped and unhealthy containers on each host with Docker on\n\n### Changed\n\n- The container grid fits as many cards as the tab has room for, or pick how many per row next to the grid and list switch"
         },
         {
           "version": "1.2.0",
@@ -3072,6 +3096,31 @@
       "versions": [],
       "gated": [
         {
+          "version": "1.1.1",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Service-Manager/releases/download/v1.1.1/service-manager-1.1.1.tmxplug",
+          "sha256": "5731a04336d341a330416cba7b7999f0d8e6215752eabbf978ed58c4543c5036",
+          "signature": "2isUWODF8CvrLOAjfCDW+g33eRgL7gLDNdnYnuvjdaG7ue/mbAdZq9K5bdGRUHRnxSbxJqsJdeCSk2rj3RMJBQ==",
+          "size": 417811,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "ssh:connect",
+            "network:serve",
+            "db:own",
+            "notify:send",
+            "users:impersonate",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.9",
+            "termix": ">=26.10.6"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Service-Manager/releases/tag/v1.1.1",
+          "notes": "### Changed\n\n- Needs Termix 26.10.6 or newer",
+          "publishedAt": "2026-10-29T22:10:56.000Z"
+        },
+        {
           "version": "1.1.0",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Service-Manager/releases/download/v1.1.0/service-manager-1.1.0.tmxplug",
@@ -3093,8 +3142,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Service-Manager/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- Watched services dashboard card: every service you watch, on every host, with whether it is up",
-          "publishedAt": "2026-10-22T17:59:04.000Z"
+          "publishedAt": "2026-10-22T17:59:04.000Z",
+          "notes": "### Added\n\n- Watched services dashboard card: every service you watch, on every host, with whether it is up"
         },
         {
           "version": "1.0.0",
@@ -4799,6 +4848,33 @@
       ],
       "gated": [
         {
+          "version": "1.2.2",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Tunnels/releases/download/v1.2.2/tunnels-1.2.2.tmxplug",
+          "sha256": "92d89c5bf7fa43fff790cc5240ae75eaf05c3c9089c6a0dfb68bbc37c517bf04",
+          "signature": "E7LYHXXDhw4GOHMo3lM3OaDf/MaJ7RNcMQSJj9PZxu0Gg+YnMQ55vhIBiiGn5X0gGkkAGNM+Up5t1SXgJ/EZCQ==",
+          "size": 558172,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "ssh:connect",
+            "db:own",
+            "network:serve",
+            "ui:surface",
+            "users:impersonate",
+            "db:core-refs",
+            "desktop:local",
+            "secrets:own"
+          ],
+          "engine": {
+            "api": "^1.5",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Tunnels/releases/tag/v1.2.2",
+          "notes": "### Fixed\n\n- A local tunnel to an address that a saved host also uses now listens on this machine like any other local tunnel, instead of quietly listening on the SSH host. Pick the saved host by name to route through it",
+          "publishedAt": "2026-10-29T22:11:06.000Z"
+        },
+        {
           "version": "1.2.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Tunnels/releases/download/v1.2.1/tunnels-1.2.1.tmxplug",
@@ -4822,8 +4898,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Tunnels/releases/tag/v1.2.1",
-          "notes": "### Added\n\n- Tunnels panel beside an SSH terminal: the host's tunnels with live status, start and stop\n- Tunnels dashboard card: every tunnel you can reach, with start and stop\n\n### Changed\n\n- The tunnel grid fits as many cards as the tab has room for, or pick how many per row next to the grid and list switch\n\n### Fixed\n\n- Saved tunnels now sync to a linked desktop, including for hosts shared with the account",
-          "publishedAt": "2026-10-22T18:07:55.000Z"
+          "publishedAt": "2026-10-22T18:07:55.000Z",
+          "notes": "### Added\n\n- Tunnels panel beside an SSH terminal: the host's tunnels with live status, start and stop\n- Tunnels dashboard card: every tunnel you can reach, with start and stop\n\n### Changed\n\n- The tunnel grid fits as many cards as the tab has room for, or pick how many per row next to the grid and list switch\n\n### Fixed\n\n- Saved tunnels now sync to a linked desktop, including for hosts shared with the account"
         },
         {
           "version": "1.2.0",
