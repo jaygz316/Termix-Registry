@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:15:17.577Z",
+  "updatedAt": "2026-10-29T22:17:11.511Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -2523,6 +2523,32 @@
       ],
       "versions": [
         {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Proxmox/releases/download/v1.2.0/proxmox-1.2.0.tmxplug",
+          "sha256": "154c9bc1535bb1d05ccad3ab2cb6d848a28ddbfeb6dc589c5683cd7e81ccd3c3",
+          "signature": "JKa7DSMQX3Xw9bQn6aoiVi+JBPpGa9UNa/CE9yTOqBn6Hoam+2gz7/UrsE9KugGGgpyoODwEcWGoE7Y6spbFBA==",
+          "size": 317848,
+          "capabilities": [
+            "hosts:read",
+            "hosts:write",
+            "credentials:use",
+            "credentials:read",
+            "ssh:connect",
+            "db:own",
+            "network:serve",
+            "ui:surface",
+            "users:impersonate"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Proxmox/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- Cluster aware sync: nodes of the same cluster share one host per guest, so sync can run on every node\n- Imported guests go in a folder named after the cluster, with a Folder for guests setting and an optional folder per node\n\n### Fixed\n\n- Auto Sync no longer makes duplicate guests when a linked desktop and the server both sync the same Proxmox host. Delete the duplicates once and they stay gone\n- Discovery uses an IP in your Preferred IP ranges for a container with more than one network card, also when that card gets its address from DHCP\n- The Proxmox view no longer fails and retries on the first connect after a restart",
+          "publishedAt": "2026-10-29T22:16:21.000Z"
+        },
+        {
           "version": "1.1.0",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Proxmox/releases/download/v1.1.0/proxmox-1.1.0.tmxplug",
@@ -2545,8 +2571,8 @@
             "termix": ">=26.10.0"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Proxmox/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- Proxmox nodes dashboard card: CPU, memory, disk and running guests for every node with Proxmox Stats on",
-          "publishedAt": "2026-10-22T18:09:02.000Z"
+          "publishedAt": "2026-10-22T18:09:02.000Z",
+          "notes": "### Added\n\n- Proxmox nodes dashboard card: CPU, memory, disk and running guests for every node with Proxmox Stats on"
         },
         {
           "version": "1.0.2",
