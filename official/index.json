@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:24:20.623Z",
+  "updatedAt": "2026-10-29T22:26:04.188Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -794,6 +794,28 @@
       "versions": [],
       "gated": [
         {
+          "version": "1.1.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Classic-Layout/releases/download/v1.1.0/classic-layout-1.1.0.tmxplug",
+          "sha256": "06a94fdbc2eda2f7cdeb4a6bbdc6adb289d524abfe836d3a32ac9b38ad5f65b9",
+          "signature": "82LLECaiApW0LdR57ghvCBvtDjnTF9vlBIAODz7ra7obltb0nac/coIBNeRF4Al9jk5pl0ZTcx0k/AnlrMsJAg==",
+          "size": 1862970,
+          "capabilities": [
+            "files:own",
+            "network:serve",
+            "settings:read-core",
+            "ui:layout",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.6",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Classic-Layout/releases/tag/v1.1.0",
+          "notes": "### Added\n\n- Rail items can show a small status dot, used by Sync to show if the desktop is connected to its server\n- Plugins can replace the status badge in the dashboard's host list, used by Host Metrics to show failing health checks\n- Customize sidebar can turn off alternating row colors in the host list (needs Termix 26.10.6)\n- Removing someone from a shared folder offers to remove their access from the folder's hosts too (needs Termix 26.10.6)\n- A folder with hosts shared with you has a Set personal login button, so you pick your own login once for all of them (needs Termix 26.10.6)\n\n### Fixed\n\n- On the desktop, a host shared with you opens read only with a note to change it on the server, instead of failing with Error saving host\n- A failed host save shows the reason the server gave\n- Compact host rows give the name its own full line, so long names are not cut short or covered by the row actions",
+          "publishedAt": "2026-10-29T22:24:54.000Z"
+        },
+        {
           "version": "1.0.2",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Classic-Layout/releases/download/v1.0.2/classic-layout-1.0.2.tmxplug",
@@ -812,8 +834,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Classic-Layout/releases/tag/v1.0.2",
-          "notes": "### Fixed\n\n- Cloning a host now keeps which settings are custom and which follow the defaults",
-          "publishedAt": "2026-10-22T18:02:39.000Z"
+          "publishedAt": "2026-10-22T18:02:39.000Z",
+          "notes": "### Fixed\n\n- Cloning a host now keeps which settings are custom and which follow the defaults"
         },
         {
           "version": "1.0.1",
@@ -4336,6 +4358,35 @@
       "versions": [],
       "gated": [
         {
+          "version": "1.1.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Sync/releases/download/v1.1.0/sync-1.1.0.tmxplug",
+          "sha256": "9023d547f0e0bcef582c6ba7b7a8ab2ef68d8d0b973dde17d9e8c84d92b6429e",
+          "signature": "88zEr5rVT520V28I+XDkEItS+gApQa1TsDrxK7E8yEeSSkR4yH559ckzC+Sa4c/8jLncEGHF6ENK7mgXOMQtCg==",
+          "size": 459233,
+          "capabilities": [
+            "sync:provide",
+            "db:own",
+            "hosts:read",
+            "hosts:write",
+            "hosts:lock",
+            "ssh:transport",
+            "users:impersonate",
+            "network:outbound",
+            "network:serve",
+            "kv:own",
+            "secrets:own",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.10",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Sync/releases/tag/v1.1.0",
+          "notes": "### Added\n\n- POST /sync/v2/ids maps many sync ids to the server's host and snippet ids in one request\n- A dot on the Sync icon shows if the desktop is connected to its server (needs Classic Layout 1.1.0)\n\n### Fixed\n\n- On the desktop, plugins like File Manager, Host Metrics and Tmux Monitor now connect through the server for hosts set to start connections on the server (needs Termix 26.10.6)\n- A lost answer to a session refresh no longer signs the desktop or phone out, the old session keeps working for five minutes\n- A row the server lost (after a restore) is sent again as new instead of retried forever\n- Linking to a Termix server that has the Sync plugin turned off says so, instead of saying there is no Termix server at that address",
+          "publishedAt": "2026-10-29T22:24:35.000Z"
+        },
+        {
           "version": "1.0.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Sync/releases/download/v1.0.1/sync-1.0.1.tmxplug",
@@ -4361,8 +4412,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Sync/releases/tag/v1.0.1",
-          "notes": "### Added\n\n- Keep all mine or keep all server settles every sync conflict at once, after a confirm",
-          "publishedAt": "2026-10-22T18:10:34.000Z"
+          "publishedAt": "2026-10-22T18:10:34.000Z",
+          "notes": "### Added\n\n- Keep all mine or keep all server settles every sync conflict at once, after a confirm"
         },
         {
           "version": "1.0.0",
