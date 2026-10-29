@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:13:33.348Z",
+  "updatedAt": "2026-10-29T22:15:17.577Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -372,6 +372,32 @@
       ],
       "versions": [
         {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Alerts/releases/download/v1.2.0/alerts-1.2.0.tmxplug",
+          "sha256": "488947482eed0306893c2983f701a0e14c55975ca2a0c4bb0799a40fce9db054",
+          "signature": "ASFtiiBx2eCe9ygnHMvVYPuJa1O/g7W+n7eI4DAEZu4bTbZomt4gXznT0doEmWQzy2t4br1b/18GvV/5VDq3Cw==",
+          "size": 568869,
+          "capabilities": [
+            "db:core-refs",
+            "db:own",
+            "events:core",
+            "network:outbound",
+            "network:serve",
+            "notify:hub",
+            "secrets:own",
+            "settings:read-core",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Alerts/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- Telegram channels: alerts go to a chat, group or channel through your own bot\n- Webhook channels can send your own JSON body with placeholders like {{title}} and {{message}}, for services like Mattermost",
+          "publishedAt": "2026-10-29T22:14:01.000Z"
+        },
+        {
           "version": "1.1.0",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Alerts/releases/download/v1.1.0/alerts-1.1.0.tmxplug",
@@ -394,8 +420,8 @@
             "termix": ">=26.10.0"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Alerts/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- Alerts dashboard card: your inbox on the dashboard, with mark as read",
-          "publishedAt": "2026-10-22T18:01:57.000Z"
+          "publishedAt": "2026-10-22T18:01:57.000Z",
+          "notes": "### Added\n\n- Alerts dashboard card: your inbox on the dashboard, with mark as read"
         },
         {
           "version": "1.0.2",
