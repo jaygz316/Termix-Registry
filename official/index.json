@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:22:28.726Z",
+  "updatedAt": "2026-10-29T22:24:20.623Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -1054,6 +1054,30 @@
       "versions": [],
       "gated": [
         {
+          "version": "1.1.1",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Databases/releases/download/v1.1.1/databases-1.1.1.tmxplug",
+          "sha256": "316e26c682f5b07b0809e87f8ea94e2b819a9c46fc0e22611b24069c804312d0",
+          "signature": "BbM4m/xIg5yL8yI/Q1jtTw8r5D7xUn7Io2Dvj/wpwmFH1a1C9uMNNeB1+nHJsnC8vzzenNePzcJER0hy91z0Cw==",
+          "size": 254638,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "ssh:connect",
+            "network:serve",
+            "ui:surface",
+            "db:own",
+            "secrets:own"
+          ],
+          "engine": {
+            "api": "^1.5",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Databases/releases/tag/v1.1.1",
+          "notes": "### Added\n\n- A Routines view lists stored procedures and functions with their code, for MySQL, MariaDB and PostgreSQL\n- Save SQL scripts in the console and load them again with one click\n\n### Fixed\n\n- The table list and the data grid scroll again instead of cutting off after the first rows",
+          "publishedAt": "2026-10-29T22:23:01.000Z"
+        },
+        {
           "version": "1.1.0",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Databases/releases/download/v1.1.0/databases-1.1.0.tmxplug",
@@ -1074,8 +1098,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Databases/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- Databases panel beside an SSH terminal: the host's saved logins, tables and SQL console next to its shell",
-          "publishedAt": "2026-10-22T18:12:18.000Z"
+          "publishedAt": "2026-10-22T18:12:18.000Z",
+          "notes": "### Added\n\n- Databases panel beside an SSH terminal: the host's saved logins, tables and SQL console next to its shell"
         },
         {
           "version": "1.0.0",
@@ -1557,6 +1581,31 @@
       ],
       "versions": [
         {
+          "version": "1.1.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Fleets/releases/download/v1.1.0/fleets-1.1.0.tmxplug",
+          "sha256": "5e0218c6145524ae8776b8fcbae043749c893d9b04fb67a9b3fe262ff76c0573",
+          "signature": "PsXJ+4l0aZNheVaID4DlSqYo/q7VIJgfHSK1rMJN4KIdpZJqFHIyx5WG9zmpBPAY0Cojhsy1pRrKKaF/swfyCw==",
+          "size": 493825,
+          "capabilities": [
+            "hosts:read",
+            "hosts:write",
+            "credentials:use",
+            "credentials:read",
+            "ssh:connect",
+            "db:own",
+            "network:serve",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Fleets/releases/tag/v1.1.0",
+          "notes": "### Added\n\n- Fleet actions try a host again when its SSH connection times out, only for the hosts that failed, with admin settings for how many tries and how long to wait",
+          "publishedAt": "2026-10-29T22:23:32.000Z"
+        },
+        {
           "version": "1.0.2",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Fleets/releases/download/v1.0.2/fleets-1.0.2.tmxplug",
@@ -1574,12 +1623,12 @@
             "ui:surface"
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Fleets/releases/tag/v1.0.2",
-          "notes": "### Added\n\n- Pick a snippet in a fleet's Run command tab to run it on every host in the fleet\n\n### Changed\n\n- The plugin name and description show in your language",
           "publishedAt": "2026-10-18T05:06:02.000Z",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Added\n\n- Pick a snippet in a fleet's Run command tab to run it on every host in the fleet\n\n### Changed\n\n- The plugin name and description show in your language"
         },
         {
           "version": "1.0.1",
@@ -1600,11 +1649,11 @@
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Fleets/releases/tag/v1.0.1",
           "publishedAt": "2026-10-11T22:29:33.000Z",
-          "notes": "### Fixed\n\n- Fleet commands, package actions and file transfers no longer time out after 30 seconds\n- Fleet commands can run for up to an hour per host",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Fixed\n\n- Fleet commands, package actions and file transfers no longer time out after 30 seconds\n- Fleet commands can run for up to an hour per host"
         },
         {
           "version": "1.0.0",
@@ -1625,11 +1674,11 @@
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Fleets/releases/tag/v1.0.0",
           "publishedAt": "2026-10-10T05:56:29.000Z",
-          "notes": "### Added\n\n- First release\n- Group hosts by hand or with tag rules, so new hosts join on their own\n- Run one command on every host and see each result\n- Install, remove or upgrade packages across the fleet\n- Push and pull files on every host\n- Collect an inventory of OS, kernel, architecture and uptime\n- Share a fleet with users or roles",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Added\n\n- First release\n- Group hosts by hand or with tag rules, so new hosts join on their own\n- Run one command on every host and see each result\n- Install, remove or upgrade packages across the fleet\n- Push and pull files on every host\n- Collect an inventory of OS, kernel, architecture and uptime\n- Share a fleet with users or roles"
         }
       ]
     },
@@ -3017,15 +3066,15 @@
     {
       "id": "secret-sources",
       "name": "Secret Sources",
-      "description": "Pull host passwords and keys from 1Password when you connect instead of storing them in Termix.",
+      "description": "Pull host passwords and keys from 1Password, Bitwarden, Infisical or HashiCorp Vault when you connect instead of storing them in Termix.",
       "author": "Termix",
       "category": "Access & Security",
       "repository": "https://github.com/Termix-SSH/Plugin-Secret-Sources",
       "icon": "KeyRound",
       "video": "https://www.youtube.com/watch?v=5b_fTbM-sz4",
       "features": [
-        "Works with a self-hosted 1Password Connect server",
-        "Use op://vault/item/field references in a host's password or key fields",
+        "Works with 1Password Connect, Infisical, Bitwarden Secrets Manager, HashiCorp Vault and Bitwarden or Vaultwarden through bw serve",
+        "Use references like op://vault/item/field or vault://secret/app#password in a host's password or key fields",
         "Secrets are fetched each time you connect and never stored in Termix"
       ],
       "docs": "https://docs.termix.site/plugins/secret-sources",
@@ -3034,6 +3083,30 @@
         "settings"
       ],
       "versions": [
+        {
+          "version": "1.1.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Secret-Sources/releases/download/v1.1.0/secret-sources-1.1.0.tmxplug",
+          "sha256": "3ba67666a52a38245284bb0294fd7af52a5613921454e66d3b4972727d7ed5c0",
+          "signature": "admmB9O86hDjL2ZFd5VeP1I0NTBGu68wNl4au/dcT6vK3B+Xr7Vbxl19M46U7adCuSjY91XPb6TpKT5SYZkTBA==",
+          "size": 131345,
+          "capabilities": [
+            "db:own",
+            "secrets:own",
+            "network:outbound",
+            "network:serve",
+            "auth:provide",
+            "ui:surface",
+            "users:impersonate"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Secret-Sources/releases/tag/v1.1.0",
+          "notes": "### Added\n\n- Infisical, Bitwarden Secrets Manager and HashiCorp Vault sources, with `infisical://`, `bws://` and `vault://` references\n- Bitwarden and Vaultwarden vaults through `bw serve`, with `bw://item/field` references\n- Pick the type of a new source, and Test shows what it found for each type",
+          "publishedAt": "2026-10-29T22:23:28.000Z"
+        },
         {
           "version": "1.0.2",
           "api": "1",
@@ -3051,12 +3124,12 @@
             "users:impersonate"
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Secret-Sources/releases/tag/v1.0.2",
-          "notes": "### Changed\n\n- The plugin name and description show in your language",
           "publishedAt": "2026-10-18T04:55:27.000Z",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Changed\n\n- The plugin name and description show in your language"
         },
         {
           "version": "1.0.1",
@@ -3076,11 +3149,11 @@
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Secret-Sources/releases/tag/v1.0.1",
           "publishedAt": "2026-10-11T22:29:48.000Z",
-          "notes": "### Changed\n\n- Translated into every supported language",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Changed\n\n- Translated into every supported language"
         },
         {
           "version": "1.0.0",
@@ -3100,11 +3173,11 @@
           ],
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Secret-Sources/releases/tag/v1.0.0",
           "publishedAt": "2026-10-09T21:41:59.000Z",
-          "notes": "### Added\n\n- First release\n- Works with a self-hosted 1Password Connect server\n- Use `op://vault/item/field` references in a host's password or key fields\n- Secrets are fetched each time you connect and never stored in Termix",
           "engine": {
             "api": "^1.2",
             "termix": ">=26.10.0"
-          }
+          },
+          "notes": "### Added\n\n- First release\n- Works with a self-hosted 1Password Connect server\n- Use `op://vault/item/field` references in a host's password or key fields\n- Secrets are fetched each time you connect and never stored in Termix"
         }
       ]
     },
@@ -3637,6 +3710,7 @@
         "Save commands and notes in folders",
         "Run them in one or more terminals, or straight on a set of hosts",
         "Variables for the host and your own inputs",
+        "Encrypted secrets you can use as {{NAME}} in a command",
         "Run a snippet each time you connect to a host",
         "Share snippets with users or roles",
         "Import and export as JSON",
@@ -3655,6 +3729,33 @@
         "uses"
       ],
       "versions": [
+        {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Snippets/releases/download/v1.2.0/snippets-1.2.0.tmxplug",
+          "sha256": "a72c0e1f38e49cf86ed8993b6913a6fbbdad7814ae132d5186c097ee3ea09bc3",
+          "signature": "1z12kUY9JMcZw1bgPAHTsK+WN7pfFdnwqyz71U5mZuQjNklTfSRS4ZzHutcOdW5vkmR9WI6W7/+6FjPp+s0AAg==",
+          "size": 445804,
+          "capabilities": [
+            "db:own",
+            "network:serve",
+            "ssh:connect",
+            "credentials:use",
+            "credentials:read",
+            "hosts:write",
+            "ui:surface",
+            "events:core",
+            "db:core-refs",
+            "secrets:own"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Snippets/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- Secrets: save encrypted values in the snippet settings and use them in a command as `{{NAME}}`\n- Runs on hosts hide secret values in the output, and every secret use is audited\n\n### Fixed\n\n- Snippets with target hosts now run in the terminals picked in Run in, instead of always running on their target hosts",
+          "publishedAt": "2026-10-29T22:23:44.000Z"
+        },
         {
           "version": "1.1.0",
           "api": "1",
@@ -3678,8 +3779,8 @@
             "termix": ">=26.10.0"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Snippets/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- Snippets panel beside an SSH terminal: search and click a snippet to run it in that terminal\n- Snippets dashboard card: run snippets that have target hosts, or copy any snippet",
-          "publishedAt": "2026-10-22T18:09:13.000Z"
+          "publishedAt": "2026-10-22T18:09:13.000Z",
+          "notes": "### Added\n\n- Snippets panel beside an SSH terminal: search and click a snippet to run it in that terminal\n- Snippets dashboard card: run snippets that have target hosts, or copy any snippet"
         },
         {
           "version": "1.0.2",
@@ -5553,9 +5654,33 @@
       ],
       "docs": "https://docs.termix.site/plugins/webauthn",
       "contributes": [
-        "auth"
+        "auth",
+        "settings"
       ],
       "versions": [
+        {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-WebAuthn/releases/download/v1.2.0/webauthn-1.2.0.tmxplug",
+          "sha256": "4e7e06d05a17b6e474fdb0d45c8fc320f2ea89375bda440f824636cc393d4615",
+          "signature": "s6nq/NSQcnQab0AHU2bZBnSDlkCuLfxDieM6ryP/f1x+XpuykgLrKHRyZAy/nIX+QTKeYT0kalkqNoYeCWWEBA==",
+          "size": 497879,
+          "capabilities": [
+            "db:own",
+            "network:serve",
+            "auth:provide",
+            "settings:read-core",
+            "ui:surface",
+            "db:core-refs"
+          ],
+          "engine": {
+            "api": "^1.2",
+            "termix": ">=26.10.0"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-WebAuthn/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- An admin setting to turn off passkey sign in, which hides the Passkeys button on the sign in page. Security keys as a second factor keep working",
+          "publishedAt": "2026-10-29T22:22:28.000Z"
+        },
         {
           "version": "1.1.0",
           "api": "1",
@@ -5576,8 +5701,8 @@
             "termix": ">=26.10.0"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-WebAuthn/releases/tag/v1.1.0",
-          "notes": "### Added\n\n- A security key or passkey can be the step after your password. Turn it on in Settings, Security\n- The security key step counts for a login rule that requires a second factor",
-          "publishedAt": "2026-10-20T19:56:13.000Z"
+          "publishedAt": "2026-10-20T19:56:13.000Z",
+          "notes": "### Added\n\n- A security key or passkey can be the step after your password. Turn it on in Settings, Security\n- The security key step counts for a login rule that requires a second factor"
         },
         {
           "version": "1.0.2",
