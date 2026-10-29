@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:19:01.609Z",
+  "updatedAt": "2026-10-29T22:22:28.726Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -2052,6 +2052,7 @@
       "category": "Productivity",
       "repository": "https://github.com/Termix-SSH/Plugin-Import-Export",
       "icon": "ArrowDownUp",
+      "video": "https://www.youtube.com/watch?v=khRjXFQK4Wk",
       "features": [
         "Import hosts from a Termix JSON file",
         "Import hosts from an SSH config file",
@@ -2064,9 +2065,31 @@
         "http",
         "permissions"
       ],
-      "video": "https://www.youtube.com/watch?v=khRjXFQK4Wk",
       "versions": [],
       "gated": [
+        {
+          "version": "1.0.1",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Import-Export/releases/download/v1.0.1/import-export-1.0.1.tmxplug",
+          "sha256": "d8f2f865e1e6b226f4fe38501bf69b752f47a643bed1d9d127181083e27da2f0",
+          "signature": "pEiGI1/ZFpXdHxdf25YRzbuarPd8B0uEt+BA+8QqSyCkYz7S3e4bFdAirZoF1CUPotWKeNtDcHZOwH4gvi0YDQ==",
+          "size": 87505,
+          "capabilities": [
+            "network:serve",
+            "hosts:read",
+            "hosts:write",
+            "hosts:export",
+            "credentials:write",
+            "ui:surface"
+          ],
+          "engine": {
+            "api": "^1.5",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Import-Export/releases/tag/v1.0.1",
+          "notes": "### Added\n\n- Exports keep each host's color and icon with the tags",
+          "publishedAt": "2026-10-29T22:21:34.000Z"
+        },
         {
           "version": "1.0.0",
           "api": "1",
@@ -2087,8 +2110,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Import-Export/releases/tag/v1.0.0",
-          "notes": "### Added\n\n- Import hosts from a Termix JSON file or an SSH config file, skipping or overwriting hosts that already exist\n- Export all or some hosts, choose the fields to include, and share an export without secrets\n- Export selected hosts from the Hosts panel\n- Download a sample import file",
-          "publishedAt": "2026-10-20T19:55:55.000Z"
+          "publishedAt": "2026-10-20T19:55:55.000Z",
+          "notes": "### Added\n\n- Import hosts from a Termix JSON file or an SSH config file, skipping or overwriting hosts that already exist\n- Export all or some hosts, choose the fields to include, and share an export without secrets\n- Export selected hosts from the Hosts panel\n- Download a sample import file"
         }
       ]
     },
@@ -2785,6 +2808,31 @@
       ],
       "gated": [
         {
+          "version": "1.3.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Remote-Desktop/releases/download/v1.3.0/remote-desktop-1.3.0.tmxplug",
+          "sha256": "69177d2a642d549fbd4769833437fdb96065251a4965990b881d1dd583b2832a",
+          "signature": "RZyIhDn3ameZ3CD4cEUmXAsFwqQ7bFXrINIiYZOvkM6D1oviuagE7E0vUg/WEbUjLpGd+CuaBGqknDAD/J9pBA==",
+          "size": 3960178,
+          "capabilities": [
+            "hosts:read",
+            "credentials:read",
+            "credentials:use",
+            "ssh:connect",
+            "network:serve",
+            "desktop:local",
+            "ui:surface",
+            "users:impersonate"
+          ],
+          "engine": {
+            "api": "^1.5",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Remote-Desktop/releases/tag/v1.3.0",
+          "notes": "### Added\n\n- Sign out button for RDP that signs out of Windows after you confirm\n- Record button to start and stop a recording during a session on the built-in engine, with Session Recording on\n\n### Changed\n\n- A TLS failure on the built-in engine says why it failed\n\n### Fixed\n\n- A remote desktop no longer freezes after the browser tab was hidden or the screen locked; it reconnects on its own when the connection dropped (#104)\n- The built-in engine no longer ends a session because a hidden tab or a phone in the background stopped sending keepalives for a few seconds\n- RDP in the built-in engine keeps its display scale after the window is resized or a phone is rotated\n- Copying text in a remote session reaches your clipboard when Termix is opened over plain HTTP: it is put there on your next click or key press, with a note saying so\n- The Korean Han/Eng and Hanja keys switch the input language in RDP sessions on the built-in engine, also from clients with a Korean keyboard driver\n- The built-in engine connects to Windows Server 2019 hosts that send a short multitransport message during connect\n- Open in Windows Remote Desktop shows the mstsc window instead of opening it hidden",
+          "publishedAt": "2026-10-29T22:22:01.000Z"
+        },
+        {
           "version": "1.2.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Remote-Desktop/releases/download/v1.2.1/remote-desktop-1.2.1.tmxplug",
@@ -2806,8 +2854,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Remote-Desktop/releases/tag/v1.2.1",
-          "notes": "### Fixed\n\n- Apple Remote Desktop with a macOS account no longer shows a black screen in the built-in engine\n- The built-in engine connects to Windows servers that offer a UDP transport while licensing, instead of failing with a license error\n- Right Alt now reaches Windows as Alt on layouts without AltGr, so the Korean Han/Eng key switches the language\n- Debug logs from the built-in engine, like the sound channel lines, now show when the log level is debug",
-          "publishedAt": "2026-10-22T17:48:57.000Z"
+          "publishedAt": "2026-10-22T17:48:57.000Z",
+          "notes": "### Fixed\n\n- Apple Remote Desktop with a macOS account no longer shows a black screen in the built-in engine\n- The built-in engine connects to Windows servers that offer a UDP transport while licensing, instead of failing with a license error\n- Right Alt now reaches Windows as Alt on layouts without AltGr, so the Korean Han/Eng key switches the language\n- Debug logs from the built-in engine, like the sound channel lines, now show when the log level is debug"
         },
         {
           "version": "1.2.0",
