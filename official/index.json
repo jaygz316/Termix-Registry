@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:11:44.448Z",
+  "updatedAt": "2026-10-29T22:13:33.348Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -1419,6 +1419,34 @@
       ],
       "gated": [
         {
+          "version": "1.1.2",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-File-Manager/releases/download/v1.1.2/file-manager-1.1.2.tmxplug",
+          "sha256": "6769e58f23722c06b6e4c187c7ef5ba03f28bbdc19e859104b7a5ead8690c154",
+          "signature": "4j0ugeHJyPl0UxU2cyIskFiD+lxtdpTN03LC6JUwc6bMkX7pC+rx05d1uNbdge3GoVpKoXrpZmpKw2aJshE/DA==",
+          "size": 7853563,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "credentials:read",
+            "ssh:connect",
+            "db:own",
+            "network:serve",
+            "ui:surface",
+            "events:core",
+            "kv:own",
+            "users:impersonate",
+            "desktop:local"
+          ],
+          "engine": {
+            "api": "^1.9",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-File-Manager/releases/tag/v1.1.2",
+          "notes": "### Added\n\n- Downloads can pick up where they stopped instead of starting over\n\n### Changed\n\n- Folders open faster the first time, with listings fetched ahead when you hover a folder and shared between requests\n\n### Fixed\n\n- The grid lays out right again after switching back to a file manager tab\n- List rows keep a fixed height, so the gaps no longer jump after opening a folder\n- A sudo password for a directory listing goes over stdin, so it no longer shows in the host's process list\n- An empty folder shows a loading state instead of No files found while it loads\n- Uploaded files with non-English names keep their names instead of turning into garbled text\n- Sorting by name puts zero padded and hex file names (like WAL files) in the right order\n- You can select text in a file name while renaming it, instead of dragging the file\n- Selected text in the editor stands out from the current line highlight\n- Deleting, renaming or creating a folder updates the folder tree in the sidebar right away\n- Downloading a file only root can read asks for the sudo password and downloads it, instead of failing with an error or an empty file\n- Uploads work on hosts without an SFTP server and in SCP legacy mode, by writing the file over a plain SSH command\n- Folders open on routers with Dropbear and no SFTP server (SCP legacy mode) instead of reconnecting over and over",
+          "publishedAt": "2026-10-29T22:11:53.000Z"
+        },
+        {
           "version": "1.1.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-File-Manager/releases/download/v1.1.1/file-manager-1.1.1.tmxplug",
@@ -1443,8 +1471,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-File-Manager/releases/tag/v1.1.1",
-          "notes": "### Fixed\n\n- Deleting many files at once is faster, shows progress, can be cancelled and no longer lets a paste or upload race it",
-          "publishedAt": "2026-10-22T17:55:01.000Z"
+          "publishedAt": "2026-10-22T17:55:01.000Z",
+          "notes": "### Fixed\n\n- Deleting many files at once is faster, shows progress, can be cancelled and no longer lets a paste or upload race it"
         },
         {
           "version": "1.1.0",
