@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:17:11.511Z",
+  "updatedAt": "2026-10-29T22:19:01.609Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -3847,6 +3847,33 @@
       ],
       "gated": [
         {
+          "version": "1.2.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-SSH-Terminal/releases/download/v1.2.0/ssh-terminal-1.2.0.tmxplug",
+          "sha256": "629b522ae6ff77a8e033b89bb2efa675ec60c147c378012548feec1a005f9533",
+          "signature": "i0NT93BMXlFwOIfGzL2bc0ExBeo8kw5FfAA4fVHJzpWkcwNc2ba+x7E4PM/3XQ9xHvecIWMRswFuvabo0jtdAw==",
+          "size": 2226279,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "credentials:read",
+            "ssh:connect",
+            "ssh:transport",
+            "network:serve",
+            "db:own",
+            "events:core",
+            "ui:surface",
+            "desktop:local"
+          ],
+          "engine": {
+            "api": "^1.11",
+            "termix": ">=26.10.3"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-SSH-Terminal/releases/tag/v1.2.0",
+          "notes": "### Added\n\n- Connect from host setting for the mobile app: the phone, this server, or automatic\n- Auto-Tmux host option Ask when one session exists, so a new tab can start its own tmux session instead of joining the only one\n- Ctrl+click (Cmd+click on Mac) opens a link right away, and a new link setting opens links only that way so a plain click can select text\n- An Edit host button on the connection failure screen opens the host's editor (needs Termix 26.10.6)\n- Su Password Auto-fill: at a su prompt the terminal offers the password saved on another host with the same address and that user, and never offers the login password there\n- rz and sz (lrzsz) file transfers in the terminal, with progress and cancel\n\n### Fixed\n\n- Right click goes to programs that use the mouse, like tmux with mouse mode, instead of pasting into their menus. Hold Shift for the old behavior\n- Reconnecting a tab no longer types stray text like 1;2c at the prompt\n- A tab that reconnects to its live session no longer logs in to the host again first, so auth logs and fail2ban stay quiet\n- Hosts with Cloudflare Tunnel on now work in File Manager, Snippets and every other feature, not only the terminal",
+          "publishedAt": "2026-10-29T22:17:32.000Z"
+        },
+        {
           "version": "1.1.1",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-SSH-Terminal/releases/download/v1.1.1/ssh-terminal-1.1.1.tmxplug",
@@ -3869,8 +3896,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-SSH-Terminal/releases/tag/v1.1.1",
-          "notes": "### Fixed\n\n- Pasting or uploading an image to a Windows OpenSSH host works when the host has no C:\\tmp folder",
-          "publishedAt": "2026-10-22T17:49:44.000Z"
+          "publishedAt": "2026-10-22T17:49:44.000Z",
+          "notes": "### Fixed\n\n- Pasting or uploading an image to a Windows OpenSSH host works when the host has no C:\\tmp folder"
         },
         {
           "version": "1.1.0",
