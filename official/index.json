@@ -4,7 +4,7 @@
   "name": "Termix Official Plugins",
   "apiVersion": 1,
   "publicKey": "rF6ouWTnuLgnZi7yemr+yhZmMxvNMvgro1Mf05IkSGo=",
-  "updatedAt": "2026-10-29T22:26:04.188Z",
+  "updatedAt": "2026-10-29T22:48:43.683Z",
   "plugins": [
     {
       "id": "acme-ssl",
@@ -1960,6 +1960,33 @@
       ],
       "gated": [
         {
+          "version": "1.3.0",
+          "api": "1",
+          "url": "https://github.com/Termix-SSH/Plugin-Host-Metrics/releases/download/v1.3.0/host-metrics-1.3.0.tmxplug",
+          "sha256": "b38352e4adebf4079918cd7e9e9badfb0a4a9811cc53940852ca71aef860dc26",
+          "signature": "jXX7+9Ix/DCl07IDvOfFIJUEl3hKURVX5IQsbT4FE8UooSij4WnG7U0DUWySolpKUJqXT2By6+uTTtfQHbQaAw==",
+          "size": 1107967,
+          "capabilities": [
+            "hosts:read",
+            "credentials:use",
+            "credentials:read",
+            "ssh:connect",
+            "db:own",
+            "network:serve",
+            "ui:surface",
+            "events:core",
+            "users:impersonate",
+            "notify:send"
+          ],
+          "engine": {
+            "api": "^1.9",
+            "termix": ">=26.10.6"
+          },
+          "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Host-Metrics/releases/tag/v1.3.0",
+          "notes": "### Added\n\n- A 12 column card grid: drag cards anywhere, resize them by any edge, and only the cards in the way move down. Change how each card shows, undo and redo layout changes, and save layouts as templates to apply to other hosts\n- Task Manager style details for CPU, memory, disks and network: hardware info, per core graphs, history, disk activity and rates per network card, on Linux, Windows and macOS. Pick which details each card shows\n- A setting to keep live metrics running for a few seconds while the tab is in the background, so a quick switch away does not drop them\n- Smoother charts, which stay still when your system asks for reduced motion\n- Script health checks: run your own command and show its status, a number with warn and fail limits, or its output\n- Health checks can show on the dashboard: the latest result appears in the host's row, and a check that warns or fails turns the host's status badge yellow or red (the badge needs Classic Layout 1.1.0)\n- MikroTik RouterOS v7 support: CPU, memory, storage, uptime, temperature and interface traffic\n\n### Changed\n\n- Needs Termix 26.10.6 or newer\n- Everyone watching a host's live metrics shares one reading of it, so more viewers add no load on the host\n- Live update rate gains a 0.5 second option, and the admin live minimum can go down to 0.25 seconds\n\n### Fixed\n\n- The log viewer reads a unit when you press Enter or leave the field, instead of failing with Invalid unit while you type, and a bare name like webapp means webapp.service",
+          "publishedAt": "2026-10-29T22:47:51.000Z"
+        },
+        {
           "version": "1.2.0",
           "api": "1",
           "url": "https://github.com/Termix-SSH/Plugin-Host-Metrics/releases/download/v1.2.0/host-metrics-1.2.0.tmxplug",
@@ -1983,8 +2010,8 @@
             "termix": ">=26.10.3"
           },
           "releaseNotesUrl": "https://github.com/Termix-SSH/Plugin-Host-Metrics/releases/tag/v1.2.0",
-          "notes": "### Added\n\n- Busiest hosts dashboard card: the hosts with the highest CPU or memory, from samples already collected\n- Live CPU, memory, network and process updates every few seconds on Linux hosts, with per-core CPU bars, a memory split and a sortable, searchable process table with a tree view\n- Edit, delete and default policy management in the Firewall card for UFW, iptables and nftables\n\n### Changed\n\n- The metrics interval setting is now called History sampling interval\n- Low CPU and memory load shows in the accent colour instead of green\n\n### Fixed\n\n- Firewall detection picks the firewall that really owns the rules, and nftables commands use names nft accepts",
-          "publishedAt": "2026-10-22T18:13:23.000Z"
+          "publishedAt": "2026-10-22T18:13:23.000Z",
+          "notes": "### Added\n\n- Busiest hosts dashboard card: the hosts with the highest CPU or memory, from samples already collected\n- Live CPU, memory, network and process updates every few seconds on Linux hosts, with per-core CPU bars, a memory split and a sortable, searchable process table with a tree view\n- Edit, delete and default policy management in the Firewall card for UFW, iptables and nftables\n\n### Changed\n\n- The metrics interval setting is now called History sampling interval\n- Low CPU and memory load shows in the accent colour instead of green\n\n### Fixed\n\n- Firewall detection picks the firewall that really owns the rules, and nftables commands use names nft accepts"
         },
         {
           "version": "1.1.0",
